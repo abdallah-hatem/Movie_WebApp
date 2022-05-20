@@ -1,0 +1,148 @@
+.card {
+   width: 17%;
+   padding: 10px;
+   margin: 5px;
+   box-shadow: 0 3px 10px 0 #aaa;
+   border-radius: 5px;
+   img {
+      width: 100%;
+      height: 50vh;
+      cursor: pointer;
+   }
+
+   #title {
+      font-weight: bold;
+      margin-top: 6px;
+   }
+
+   #details {
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      p {
+         margin-left: 10px;
+      }
+   }
+}
+#type {
+   background-color: green;
+   color: white;
+   border-radius: 5px;
+   padding: 2px 5px;
+}
+#type-2 {
+   background-color: blue;
+   color: white;
+   border-radius: 5px;
+   padding: 3px;
+   height: 20px;
+   width: 20px;
+   text-align: center;
+}
+
+.fixedd {
+   height: 50vh;
+   overflow: hidden;
+}
+
+.movie-details {
+   background-color: white;
+   width: 80%;
+   z-index: 2;
+   position: fixed;
+   left: 10%;
+   height: 60vh;
+   padding: 10px;
+   border-radius: 5px;
+   box-shadow: 0 70px 20000px 200px #aaa;
+   display: flex;
+   justify-content: space-between;
+   top: 20px;
+
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   #top-details {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      #rating-cont {
+         display: flex;
+      }
+   }
+   img {
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 33%;
+      //   height: auto;
+   }
+
+   .exit {
+      cursor: pointer;
+      position: absolute;
+      right: 1%;
+   }
+
+   #details {
+      margin: 20px 0;
+      width: 66%;
+      overflow: scroll;
+
+      #title {
+         font-weight: bold;
+         font-size: 30px;
+         margin-right: 50px;
+         margin-bottom: 0;
+      }
+      i {
+         font-size: 50px;
+         position: relative;
+         color: yellow;
+      }
+      #rating {
+         color: black;
+         position: absolute;
+         top: 40%;
+         right: 30%;
+         font-size: 15px;
+      }
+      p {
+         font-weight: bold;
+         font-size: 20px;
+         margin-bottom: 10px;
+      }
+      span {
+         font-weight: 300;
+         color: gray;
+      }
+   }
+}
+
+@media screen and (max-width: 415px) {
+   .card {
+      width: 100%;
+   }
+   .movie-details {
+      flex-direction: column;
+      height: 85vh;
+      justify-content: right;
+      img {
+         width: 90%;
+      }
+      #details {
+         width: 100%;
+         overflow-y: scroll;
+         scroll-behavior: smooth;
+         p {
+            font-size: 20px;
+         }
+      }
+      #top-details {
+         #title {
+            font-size: 22px;
+         }
+      }
+   }
+}

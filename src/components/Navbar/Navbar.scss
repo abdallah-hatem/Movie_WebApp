@@ -1,0 +1,49 @@
+.navbar {
+   background-color: black;
+   color: white;
+   height: 8vh;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 30px;
+
+   .search-cont {
+      width: 80%;
+      display: flex;
+      justify-content: end;
+      button {
+         margin-left: 5px;
+         border-radius: 5px;
+         background-color: blue;
+         color: white;
+         padding: 5px;
+         cursor: pointer;
+         font-size: 16px;
+      }
+
+      input {
+         width: 50%;
+         height: 4vh;
+         border-radius: 5px;
+         &::placeholder {
+            padding-left: 5px;
+         }
+         &:focus {
+            padding-left: 5px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 415px) {
+   .navbar {
+      flex-direction: column;
+      justify-content: center;
+      .search-cont {
+         width: 100%;
+         input {
+            width: 100%;
+         }
+      }
+   }
+}
